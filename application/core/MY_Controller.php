@@ -15,5 +15,9 @@ class MY_Controller extends MX_Controller{
     //put your code here
     public function __construct() {
         parent::__construct();
+        $this->load->library('form_validation');
+        $this->load->module([
+            'template'
+        ]);
     }
 }

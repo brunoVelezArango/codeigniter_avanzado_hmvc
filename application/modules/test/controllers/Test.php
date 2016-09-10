@@ -18,7 +18,18 @@ class Test extends MY_Controller{
     }
     
     public function Index(){
-        var_dump("Hola");
-        exit;
+        $data =  new stdClass();
+        $data->title = "Admin";
+        $data->view_content = "test/view_admin";
+        $data->title_container = $this->lang->line('dashboard_title');
+        $this->template->admin_template($data);
+    }
+    
+    public function Home(){
+        $data =  new stdClass();
+        $data->title = "Home";
+        $data->title_container = $this->lang->line('home_title');
+        $data->view_content = "test/view_home";
+        $this->template->home_template($data);
     }
 }
