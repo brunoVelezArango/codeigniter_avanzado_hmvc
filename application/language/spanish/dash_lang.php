@@ -6,4 +6,5 @@
  * and open the template in the editor.
  */
 
-$lang['dashboard_title'] = 'Area de Trabajo - Curso Avanzado de Codeigniter + HMVC';
+$lang['dashboard_title'] = 'Area de Trabajo';
+$lang['dashboard_subtitle'] = 'Curso Avanzado de Codeigniter + HMVC';

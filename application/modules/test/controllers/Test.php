@@ -22,6 +22,7 @@ class Test extends MY_Controller{
         $data->title = "Admin";
         $data->view_content = "test/view_admin";
         $data->title_container = $this->lang->line('dashboard_title');
+        $data->subtitle_container = $this->lang->line('dashboard_subtitle');
         $this->template->admin_template($data);
     }
     
