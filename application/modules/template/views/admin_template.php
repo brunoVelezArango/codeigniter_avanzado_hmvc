@@ -239,7 +239,29 @@
 
                 <!-- Main content -->
                 <section class="content">
-                    <?php $this->load->view($view_content); ?>
+                    
+                    <?php 
+                    if ($this->session->flashdata('message_error')) {
+                        ?>
+                        <div class="alert alert-danger">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong><?php echo $this->session->flashdata('message_error'); ?></strong>
+                        </div>
+                        <?php
+                    }
+                    if ($this->session->flashdata('message_success')) {
+                        ?>
+                        <div role="alert" class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <strong><?php echo $this->session->flashdata('message_success'); ?></strong>
+                        </div>
+                        <?php
+                    }
+                    $this->load->view($view_content); ?>
                     <!-- Default box -->
                 </section>
                 <!-- /.content -->
